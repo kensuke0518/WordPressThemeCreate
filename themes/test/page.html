@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ | 投稿ページ</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/tomorrow-night-blue.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="page-header">
+        <div class="mv"><img class="mv__img" src="images/img_dummy_01.jpg" width="1120" height="630" alt=""></div>
+    </header>
+    <div class="c-hamburger gmenu-open"><a href="javascript:void(0)" class="c-hamburger__link"><span class="c-hamburger__btn"></span></a></div>
+    <div class="gmenu">
+        <nav class="gnav">
+            <a href="/" class="logo"><img src="images/img_dummy_01.jpg" width="76" height="76" alt=""></a>
+            <ul class="gnav__list">
+                <li class="gnav__list-item"><a href="#">ホームへ戻る</a></li>
+                <li class="gnav__list-item"><a href="#">記事一覧</a></li>
+                <li class="gnav__list-item"><a href="#">問題集</a></li>
+                <li class="gnav__list-item"><a href="#">このサイトについて</a></li>
+                <li class="gnav__list-item"><a href="#">お問い合わせ</a></li>
+            </ul>
+            <div class="gnav__other-item">
+                <div class="c-darkmode">
+                    <input type="checkbox" class="c-darkmode__checkbox" id="aaa" data-dark="dark">
+                    <label for="aaa" class="c-darkmode__btn"><span class="c-darkmode__feature"></span></label>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="gnav__heading">
+                <h1 class="c-heading-1">最新の投稿記事</h1>
+                <a href="/" class="u-ml30">&gt;&gt;記事一覧へ</a>
+            </div>
+            <div class="inclusion-rows">
+                <div class="c-card-1">
+                    <a href="#" class="c-card__link">
+                        <img src="images/img_dummy_01.jpg" width="320" height="180" alt="" class="c-card__img">
+                        <div class="c-card__body">
+                            <div class="c-card__title">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</div>
+                            <time class="c-card__time">更新日時など</time>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <main class="l-main-page">
+        <section>
+            <div class="l-lead-part">
+                <h1 class="c-heading-2">タイトル</h1>
+                <div class="u-mt35"><time class="u-bold">更新日時：2020/02/14</time></div>
+                <div class="u-mt10"><a href="#" class="u-mr20">#タグ1</a><a href="#">#タグ2</a></div>
+                <div class="u-mt60">
+                    <h2 class="c-heading-1">今回のポイント</h2>
+                    <ul class="u-mt30 c-list-line">
+                        <li class="c-list-line__item">ポイントポイントポイントポイントポイントポイントポイントポイントポイントポイントポイント</li>
+                        <li class="c-list-line__item">ポイントポイントポイントポイントポイントポイントポイントポイントポイントポイントポイント</li>
+                        <li class="c-list-line__item">ポイントポイントポイントポイントポイントポイントポイントポイントポイントポイントポイント</li>
+                        <li class="c-list-line__item">ポイントポイントポイントポイントポイントポイントポイントポイントポイントポイントポイント</li>
+                    </ul>
+                </div>
+            </div>
+            <section class="u-mt45">
+                <h1 class="c-heading-3">コード表現</h1>
+                <pre>
+<code>export function gmenuOpen() {
+    const gmenuOpenBtn = document.querySelector('.gmenu-open');
+    const gmenu = document.querySelector('.gmenu');
+    gmenuOpenBtn.addEventListener('click', e => {
+        gmenuOpenBtn.classList.toggle('is-open');
+        gmenu.classList.toggle('is-open');
+        document.body.classList.toggle('gmenu-is-open');
+    });
+}</code>
+                </pre>
+            </section>
+            <section class="u-mt45">
+                <h1 class="c-heading-3">こんな感じにしていきます。</h1>
+                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <pre>
+                    <code>
+                        ここにコードを表示（コードはhighlight.jsで対応）
+                    </code>
+                </pre>
+                <p>▼項目をクリックすると右に詳細な解説が出ます。詳細な解決を閉じるには左下の「解説を終わる」をクリックしてください。</p>
+                <div class="c-desc2cell">
+                    <dl class="c-desc2cell__list">
+                        <div class="c-desc2cell__box">
+                            <dt class="c-desc2cell__term">用語</dt>
+                            <dd class="c-desc2cell__define">説明</dd>
+                        </div>
+                        <div class="c-desc2cell__body">
+                            <div class="c-desc2cell__box">
+                                <dt class="c-desc2cell__term">concat()</dt>
+                                <dd class="c-desc2cell__define">配列を鎖状につなげます。引数に配列を渡すと要素と配列を鎖状で繋ぎます。</dd>
+                                <dd class="c-desc2cell__detail">
+                                    <h3 class="c-heading-1">concat()</h3>
+                                    <div>フレームごとに引数内の関数を実行します。</div>
+                                    <p class="u-mt30">ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+    <pre class="u-mt30">
+<code class="javascript">export function gmenuOpen() {
+    const gmenuOpenBtn = document.querySelector('.gmenu-open');
+    const gmenu = document.querySelector('.gmenu');
+    gmenuOpenBtn.addEventListener('click', e => {
+        gmenuOpenBtn.classList.toggle('is-open');
+        gmenu.classList.toggle('is-open');
+        document.body.classList.toggle('gmenu-is-open');
+    });
+}</code>
+</pre>
+                                </dd>
+                            </div>
+                            <div class="c-desc2cell__box">
+                                <dt class="c-desc2cell__term">requestAnimationFrame()</dt>
+                                <dd class="c-desc2cell__define">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+                                <dd class="c-desc2cell__detail">
+                                    <h3 class="c-heading-1">requestAnimationFrame()</h3>
+                                    <div>フレームごとに引数内の関数を実行します。</div>
+                                    <p class="u-mt30">ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+<pre class="u-mt30">
+<code class="javascript">export function gmenuOpen() {
+    const gmenuOpenBtn = document.querySelector('.gmenu-open');
+    const gmenu = document.querySelector('.gmenu');
+    gmenuOpenBtn.addEventListener('click', e => {
+        gmenuOpenBtn.classList.toggle('is-open');
+        gmenu.classList.toggle('is-open');
+        document.body.classList.toggle('gmenu-is-open');
+    });
+}</code>
+</pre>
+                                    <p class="u-mt30">ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                    <p>ああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおおああいいううええおお</p>
+                                </dd>
+                            </div>
+                        </div>
+                    </dl>
+                    <div class="c-desc2cell__boxout">
+                        <p>説明を終わる</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="js/index.js"></script>
+</body>
+</html>

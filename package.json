@@ -1,0 +1,52 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "compile:sass": "node-sass src/sass -o themes/test/css --style compressed --source-map true",
+    "lint:sass": "stylelint \"src/**/*.scss\"",
+    "format:sass": "stylelint --fix \"src/**/*.scss\"",
+    "mq": "postcss src/sass/style.scss -u css-mqpacker -o themes/test/css/style.css",
+    "autoprefix": "postcss src/sass/style.scss -u autoprefixer -o themes/test/css/style.css",
+    "allrun": "npm-run-all format:sass compile:sass mq autoprefix",
+    "watch:sass": "chokidar \"src/**/*.scss\" --command \"npm run allrun\"",
+    "build": "webpack",
+    "watch:webpack": "webpack -w",
+    "browsersync": "browser-sync start -s themes/test -w themes/*/*.html themes/*/*.css themes/*/*.js",
+    "watch:light": "npm run compile:sass & npm run watch:webpack & npm run browsersync",
+    "watch": "npm run watch:sass & npm run watch:webpack & npm run browsersync"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 9"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "chokidar-cli": "^2.1.0",
+    "css-declaration-sorter": "^6.0.2",
+    "css-loader": "^5.0.2",
+    "css-mqpacker": "^7.0.0",
+    "mini-css-extract-plugin": "^1.3.6",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1",
+    "stylelint": "^13.10.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
+  }
+}

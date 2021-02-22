@@ -1,0 +1,64 @@
+.c-card-1{
+    border: #ddd;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    width: 320px;
+    .c-card{
+        &__title{
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        &__time{
+            display: block;
+            margin-top: 15px;
+        }
+        &__link{
+            display: block;
+            &:hover{
+                opacity: .8;
+            }
+            .c-card__title{
+                color: var(--textcolor);
+            }
+            .c-card__time{
+                color: var(--textcolor);
+            }
+        }
+        &__body{
+            min-height: 135px;
+            padding: 17px;
+        }
+    }
+}
+
+.c-card-2{
+    border:1px solid color(siteC,light);
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    width: 590px;
+    .c-card{
+        &__title{
+            font-size: 1.6rem;
+        }
+        &__link{
+            display: flex;
+            &:hover{
+                opacity: .8;
+            }
+            .c-card__title{
+                color: var(--textcolor);
+                margin-left:10px;
+            }
+            .c-card__time{
+                color: var(--textcolor);
+            }
+        }
+        &__img{
+            border-radius: 5px 0 0 5px;
+        }
+        &__body{
+            align-items: center;
+            display: flex;
+            height: 72px;
+        }
+    }
+}

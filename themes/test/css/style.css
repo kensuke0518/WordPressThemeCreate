@@ -1,17 +1,4 @@
 @charset "UTF-8";
-/*
-Theme Name: basic
-Theme URI: テーマを配布しているURI
-Description: 基本的なブログのテーマです。
-Author: kensuke0518
-Author URI: 作者のURI
-Version: 1.0
-Tags: テーマに関するキーワード
-License: ライセンス種類
-License URI: ライセンスのURI
-*/
-
-
 /* ==========================================================================
 Foundation
 ========================================================================== */
@@ -1914,3 +1901,5 @@ Utility
 
 .u-bold {
   font-weight: bold; }
+
+/*# sourceMappingURL=style.css.map */

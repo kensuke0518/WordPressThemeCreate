@@ -1,0 +1,94 @@
+.c-scroll-text{
+    border: 1px solid color(siteC,base);
+    border-radius: 5px;
+    height: 125px;
+    overflow: hidden;
+    &__inner{
+        height: 100%;
+        overflow: auto;
+        padding: 15px 25px;
+    }
+    &__row{
+        margin-top: 10px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    &__time{
+        margin-right: 20px;
+    }
+}
+.c-search{
+    border: 1px solid var(--textcolor);
+    border-radius: 5px;
+    color: var(--textcolor);
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 920px;
+    &::placeholder{
+        color: color(siteC,light);
+    }
+    
+}
+[data-colormode="dark"] .c-search{
+    background: #000;
+    caret-color:#fff;
+    color: #fff;
+}
+.c-list-line{
+    &__item{
+        list-style: "- " inside;
+        margin-top: 15px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+}
+.c-desc2cell{
+    @mixin bottomBorder{
+        border-bottom:1px solid color(siteC,base);
+        border-right:1px solid color(siteC,base);
+    }
+    @mixin topBorder{
+        border-left:1px solid color(siteC,base);
+        border-top:1px solid color(siteC,base);
+    }
+    outline: 1px solid color(siteC,base);
+    outline-offset: -1px;
+    .c-desc2cell__body{
+        position: relative;
+    }
+    &__box{
+        display: flex;
+    }
+    .c-desc2cell__term{
+        @include topBorder;
+        align-items: center;
+        display: flex;
+        padding: 5px;
+        width: 25%;
+    }
+    .c-desc2cell__define{
+        @include topBorder;
+        padding: 5px;
+        width: 75%;
+    }
+    .c-desc2cell__detail{
+        background: var(--bgcolor);
+        border: 1px solid color(siteC,base);
+        display: none;
+        height: 767px;
+        left: 25%;
+        overflow: auto;
+        padding: 10px;
+        position: absolute;
+        top:0;
+        &.is-active{
+            display:block;
+        }
+    }
+    &__boxout{
+        border: 1px solid color(siteC,base);
+    }
+}

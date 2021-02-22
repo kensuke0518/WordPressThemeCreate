@@ -1,0 +1,90 @@
+.c-hamburger{
+    @mixin hamburger{
+        background: color(siteC);
+        border-radius: 5px;
+        display: block;
+        height: 5px;
+        transition: transform 250ms ease-in;
+        width: 48px;
+    }
+    position: absolute;
+    right: 35px;
+    top: 45px;
+    width: 48px;
+    z-index:100;
+    &__link{
+        display: inline-block;
+        height: 35px;
+        width: 48px;
+    }
+    &__btn{
+        @include hamburger;
+        position: relative;
+        &::before,&::after{
+            @include hamburger;
+            content: "";
+            position: absolute;
+        }
+        &::before{
+            left:0;
+            top:15px;
+        }
+        &::after{
+            left:0;
+            top:30px;
+        }
+    }
+}
+.gmenu-open{
+    &.is-open{
+        &.c-hamburger{
+            right: 50px;
+        }
+        .c-hamburger__btn{
+            transform: translate(0px,15px) rotate(45deg);
+            &::before{
+                transform: translate(0,-15px) rotate(-90deg);
+            }
+            &::after{
+                transform: translate(0,-30px) rotate(-90deg);
+            }
+        }
+    }
+}
+
+.c-darkmode{
+    background: #707070;
+    border-radius: 30px;
+    height: 46px;
+    width: 90px;
+    &__btn{
+        cursor: pointer;
+        position: relative;
+        &::before{
+            background:#fff;
+            border-radius: 21px;
+            box-sizing: border-box;
+            content:"";
+            display: block;
+            height: 42px;
+            left: 2px;
+            position: absolute;
+            top: 2px;
+            transition: all 250ms ease-in;
+            width: 42px;
+        }
+    }
+    input[type="checkbox"]{
+        display:none;
+        &:checked{
+            + .c-darkmode__btn{
+                &::before{
+                    background-color: darkblue;
+                    border: 2px solid yellow;
+                    transform:translate(44px)
+                }
+            }
+        }
+    }
+
+}
