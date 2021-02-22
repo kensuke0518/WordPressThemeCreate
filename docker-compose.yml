@@ -1,0 +1,23 @@
+version: "3"
+services:
+    wordpress:
+        image: wordpress:latest
+        ports:
+            - "9000:80"
+        depends_on:
+            - db
+        environment:
+            WORDPRESS_DB_HOST: "db:3306"
+        env_file: .env
+        volumes:
+            - ./themes:/var/www/html/wp-content/themes
+    db:
+        image: mysql:5.7
+        env_file: .env
+        volumes:
+            - db-data:/var/lib/mysql
+
+# databaseのように永続的なストレージが欲しい場合に必要な設定
+volumes:
+    db-data:
+        driver: local
