@@ -16,7 +16,7 @@
             <?php if(has_post_thumbnail()): ?>
                 <?php the_post_thumbnail('c-card-1__thumbnail'); ?>
             <?php else: ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="320" height="180" alt="" class="c-card__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="288" height="162" alt="" class="c-card__img">
             <?php endif; ?>
                 <div class="c-card__body">
                     <div class="c-card__title"><?php the_title(); ?></div>

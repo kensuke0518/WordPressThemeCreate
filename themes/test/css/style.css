@@ -146,36 +146,52 @@ Lauout
 
 .gmenu-outer {
   width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex; }
 
 .logo {
   display: inline-block;
   margin-bottom: 10px; }
 
 .gnav {
-  align-items: center;
-  border-bottom: 1px solid #a3a3a3;
+  border-right: 1px solid #a3a3a3;
+  width: 280px;
+  height: calc(100vh - 40px);
   display: flex;
-  margin-bottom: 30px;
-  width: 100%; }
+  flex-flow: column;
+  padding: 0 0 100px 0; }
   .gnav__heading {
     align-items: flex-end;
     display: flex; }
-  .gnav__list {
-    display: flex;
-    margin: 0 0 0 100px; }
-    .gnav__list-item {
-      display: block;
-      margin: 0 60px 0 0; }
+  .gnav__list-item {
+    display: block;
+    margin: 60px 0 0 0; }
   .gnav__other-item {
-    margin-left: auto;
-    padding-right: 100px; }
+    margin-top: auto; }
+
+.artset {
+  width: 920px;
+  padding-left: 25px; }
 
 .inclusion-rows {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 25px; }
+
+.moon {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  animation: anime 1s linear forwards; }
+
+@keyframes anime {
+  from {
+    /* 満月 */
+    box-shadow: 30px -10px 0 0 #FEE489 inset; }
+  to {
+    /* 三日月 */
+    box-shadow: -100px 0 0 0 #FEE489 inset; } }
 
 .p-main-home {
   margin: 0 auto;
@@ -209,8 +225,8 @@ Component
 ----------------------------------------------------------------- */
 .c-hamburger {
   position: absolute;
-  right: 35px;
-  top: 45px;
+  right: 0px;
+  top: 25px;
   width: 48px;
   z-index: 100; }
   .c-hamburger__link {
@@ -242,7 +258,7 @@ Component
       top: 30px; }
 
 .gmenu-open.is-open.c-hamburger {
-  right: 35px; }
+  right: 0px; }
 
 .gmenu-open.is-open .c-hamburger__btn {
   transform: translate(0px, 15px) rotate(45deg); }
@@ -271,17 +287,36 @@ Component
       top: 2px;
       transition: all 250ms ease-in;
       width: 42px; }
+    .c-darkmode__btn::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      box-shadow: 30px 30px 0 #faa80e;
+      left: -22px;
+      position: absolute;
+      top: -22px;
+      transition: all 250ms ease-in; }
   .c-darkmode input[type="checkbox"] {
     display: none; }
     .c-darkmode input[type="checkbox"]:checked + .c-darkmode__btn::before {
       background-color: darkblue;
       border: 2px solid yellow;
       transform: translate(44px); }
+    .c-darkmode input[type="checkbox"]:checked + .c-darkmode__btn::after {
+      left: -1px;
+      position: absolute;
+      top: 4px;
+      box-shadow: 10px 4px 0 0 yellow;
+      transform: translate(44px); }
 
 .c-card-1 {
   border: #ddd;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  width: 320px; }
+  width: 288px;
+  margin: 0 15px 15px 0; }
+  .c-card-1:nth-child(3n) {
+    margin-right: 0; }
   .c-card-1 .c-card__title {
     font-size: 1.8rem;
     font-weight: bold; }

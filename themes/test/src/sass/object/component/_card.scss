@@ -1,7 +1,11 @@
 .c-card-1{
     border: #ddd;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-    width: 320px;
+    width: 288px;
+    margin:0 15px 15px 0;
+    &:nth-child(3n){
+        margin-right: 0;
+    }
     .c-card{
         &__title{
             font-size: 1.8rem;

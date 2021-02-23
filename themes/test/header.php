@@ -44,19 +44,19 @@
                     <a href="/" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="76" height="76" alt=""></a>
                     <ul class="gnav__list">
                         <li class="gnav__list-item"><a href="<?php echo home_url(); ?>">ホームへ戻る</a></li>
-                        <li class="gnav__list-item"><a href="#">記事一覧</a></li>
+                        <!--<li class="gnav__list-item"><a href="#">記事一覧</a></li>
                         <li class="gnav__list-item"><a href="#">問題集</a></li>
                         <li class="gnav__list-item"><a href="#">このサイトについて</a></li>
-                        <li class="gnav__list-item"><a href="#">お問い合わせ</a></li>
+                        <li class="gnav__list-item"><a href="#">お問い合わせ</a></li>-->
                     </ul>
                     <div class="gnav__other-item">
-                        <div class="c-darkmode">
+                        <div class="c-darkmode u-mt10">
                             <input type="checkbox" class="c-darkmode__checkbox" id="aaa" data-dark="dark">
                             <label for="aaa" class="c-darkmode__btn"><span class="c-darkmode__feature"></span></label>
                         </div>
                     </div>
                 </nav>
-                <section>
+                <section class="artset">
                 <?php get_template_part('loop','recently'); ?>
                 </section>
             </div>
