@@ -37,8 +37,9 @@
     color: #fff;
 }
 .c-list-line{
+    list-style: "- ";
+    margin-left:1em;
     &__item{
-        list-style: "- " inside;
         margin-top: 15px;
         &:first-child{
             margin-top: 0;

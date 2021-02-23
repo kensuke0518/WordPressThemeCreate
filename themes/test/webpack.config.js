@@ -2,7 +2,7 @@ module.exports = {
     mode: 'development',
     entry: `./src/js/index.js`,
     output: {
-        path: `${__dirname}/themes/test/js`,
+        path: `${__dirname}/js`,
         filename: 'index.js'
     },
     module: {

@@ -23,6 +23,7 @@
     top:-100%;
     transition: top 400ms ease,background 400ms ease;
     width: 100%;
+    overflow-y: hidden;
     &.is-open{
         padding-right:20px;
         top:0;

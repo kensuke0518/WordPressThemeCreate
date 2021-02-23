@@ -7,16 +7,16 @@
     "doc": "docs"
   },
   "scripts": {
-    "compile:sass": "node-sass src/sass -o themes/test/css --style compressed --source-map true",
+    "compile:sass": "node-sass src/sass -o test/css --style compressed --source-map true",
     "lint:sass": "stylelint \"src/**/*.scss\"",
     "format:sass": "stylelint --fix \"src/**/*.scss\"",
-    "mq": "postcss src/sass/style.scss -u css-mqpacker -o themes/test/css/style.css",
-    "autoprefix": "postcss src/sass/style.scss -u autoprefixer -o themes/test/css/style.css",
+    "mq": "postcss src/sass/style.scss -u css-mqpacker -o test/css/style.css",
+    "autoprefix": "postcss src/sass/style.scss -u autoprefixer -o test/css/style.css",
     "allrun": "npm-run-all format:sass compile:sass mq autoprefix",
     "watch:sass": "chokidar \"src/**/*.scss\" --command \"npm run allrun\"",
     "build": "webpack",
     "watch:webpack": "webpack -w",
-    "browsersync": "browser-sync start -s themes/test -w themes/*/*.html themes/*/*.css themes/*/*.js",
+    "browsersync": "browser-sync start -s test -w test/*/*.html test/*/*.css test/*/*.js",
     "watch:light": "npm run compile:sass & npm run watch:webpack & npm run browsersync",
     "watch": "npm run watch:sass & npm run watch:webpack & npm run browsersync"
   },
