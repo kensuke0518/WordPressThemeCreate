@@ -109,14 +109,25 @@ pre .hljs {
 /* ==========================================================================
 Lauout
 ========================================================================== */
-#top-header .mv {
-  background: #b6f2fd;
-  height: 280px; }
+#top-header {
+  background: #b6f2fd; }
+  #top-header .mv-outer {
+    height: 280px; }
 
-#page-header .mv {
-  background: #b6f2fd;
-  height: 630px; }
-  #page-header .mv__img {
+#page-header {
+  background: #b6f2fd; }
+  #page-header .mv-outer {
+    height: 630px; }
+
+.mv-outer {
+  background: lightgreen;
+  margin: 0 auto;
+  width: 1200px;
+  position: relative; }
+
+.mv {
+  width: 1200px; }
+  .mv__img {
     display: block;
     margin: 0 auto; }
 
@@ -131,8 +142,11 @@ Lauout
   width: 100%;
   overflow-y: hidden; }
   .gmenu.is-open {
-    padding-right: 20px;
     top: 0; }
+
+.gmenu-outer {
+  width: 1200px;
+  margin: 0 auto; }
 
 .logo {
   display: inline-block;
@@ -228,7 +242,7 @@ Component
       top: 30px; }
 
 .gmenu-open.is-open.c-hamburger {
-  right: 50px; }
+  right: 35px; }
 
 .gmenu-open.is-open .c-hamburger__btn {
   transform: translate(0px, 15px) rotate(45deg); }

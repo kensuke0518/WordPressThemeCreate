@@ -16,44 +16,49 @@
 <body>
 <?php if(is_home()): ?>
     <header id="top-header">
-        <div class="mv"><img src="/" alt=""></div>
-    </header>
-<?php endif; ?>
-<?php if(is_single()): ?>
+<?php elseif(is_single()): ?>
     <header id="page-header">
-        <div class="mv">
-        <?php if(has_post_thumbnail()): ?>
-            <?php
-            $attr = array(
-                'class' => 'mv__img',
-            );
-            the_post_thumbnail(array( 1120, 630 ),$attr);
-            ?>
-        <?php else: ?>
-            <img class="mv__img" src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="1120" height="630" alt="">
-        <?php endif; ?>
+<?php endif; ?>
+        <div class="mv-outer">
+            <div class="c-hamburger gmenu-open"><a href="javascript:void(0)" class="c-hamburger__link"><span class="c-hamburger__btn"></span></a></div>
+<?php if(is_home()): ?>
+            <div class="mv"><img src="/" alt=""></div>
+<?php elseif(is_single()): ?>
+            <div class="mv">
+            <?php if(has_post_thumbnail()): ?>
+                <?php
+                $attr = array(
+                    'class' => 'mv__img',
+                );
+                the_post_thumbnail(array( 1120, 630 ),$attr);
+                ?>
+            <?php else: ?>
+                <img class="mv__img" src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="1120" height="630" alt="">
+            <?php endif; ?>
+            </div>
+<?php endif; ?>
+        </div>
+        <div class="gmenu">
+            <div class="gmenu-outer">
+                <nav class="gnav">
+                    <a href="/" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="76" height="76" alt=""></a>
+                    <ul class="gnav__list">
+                        <li class="gnav__list-item"><a href="<?php echo home_url(); ?>">ホームへ戻る</a></li>
+                        <li class="gnav__list-item"><a href="#">記事一覧</a></li>
+                        <li class="gnav__list-item"><a href="#">問題集</a></li>
+                        <li class="gnav__list-item"><a href="#">このサイトについて</a></li>
+                        <li class="gnav__list-item"><a href="#">お問い合わせ</a></li>
+                    </ul>
+                    <div class="gnav__other-item">
+                        <div class="c-darkmode">
+                            <input type="checkbox" class="c-darkmode__checkbox" id="aaa" data-dark="dark">
+                            <label for="aaa" class="c-darkmode__btn"><span class="c-darkmode__feature"></span></label>
+                        </div>
+                    </div>
+                </nav>
+                <section>
+                <?php get_template_part('loop','recently'); ?>
+                </section>
+            </div>
         </div>
     </header>
-<?php endif; ?>
-    <div class="c-hamburger gmenu-open"><a href="javascript:void(0)" class="c-hamburger__link"><span class="c-hamburger__btn"></span></a></div>
-    <div class="gmenu">
-        <nav class="gnav">
-            <a href="/" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="76" height="76" alt=""></a>
-            <ul class="gnav__list">
-                <li class="gnav__list-item"><a href="<?php echo home_url(); ?>">ホームへ戻る</a></li>
-                <!--<li class="gnav__list-item"><a href="#">記事一覧</a></li>
-                <li class="gnav__list-item"><a href="#">問題集</a></li>
-                <li class="gnav__list-item"><a href="#">このサイトについて</a></li>
-                <li class="gnav__list-item"><a href="#">お問い合わせ</a></li>-->
-            </ul>
-            <div class="gnav__other-item">
-                <div class="c-darkmode">
-                    <input type="checkbox" class="c-darkmode__checkbox" id="aaa" data-dark="dark">
-                    <label for="aaa" class="c-darkmode__btn"><span class="c-darkmode__feature"></span></label>
-                </div>
-            </div>
-        </nav>
-        <section>
-        <?php get_template_part('loop','recently'); ?>
-        </section>
-    </div>
