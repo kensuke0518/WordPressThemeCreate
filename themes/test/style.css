@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/*
+Theme Name: comical-theme
+Author: MorinagaKensuke
+Description: This is My Original Theme
+Version: 1.0
+*/
 /* ==========================================================================
 Foundation
 ========================================================================== */
@@ -178,20 +184,6 @@ Lauout
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 25px; }
-
-.moon {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  animation: anime 1s linear forwards; }
-
-@keyframes anime {
-  from {
-    /* 満月 */
-    box-shadow: 30px -10px 0 0 #FEE489 inset; }
-  to {
-    /* 三日月 */
-    box-shadow: -100px 0 0 0 #FEE489 inset; } }
 
 .p-main-home {
   margin: 0 auto;
