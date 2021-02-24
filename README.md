@@ -7,7 +7,7 @@ WordPressのテーマを作成する際はこのリポジトリを使ってく�
 4. 新テーマ独自の`package.json`を作成できます。新テーマディレクトリに`cd`した後、`npm init -y`で作成します。
 5. 表示を確認するには以下の2つの方法があります。
     - 「Browser-Sync」を`npm i -D`でインストール後、作成したindex.htmlを基準に起動する。
-    - `theme`ディレクトリと同階層（つまりこのリポジトリの一番上）に移動して「Docker」を起動後、`docker-compose up -d`とターミナル実行すると、`localhost:9000/wp-admin`に移動するとダッシュボードが表示される
+    - `theme`ディレクトリと同階層（つまりこのリポジトリの一番上）に移動して「Docker」を起動後、`docker-compose up -d`とターミナル実行して、`localhost:9000/wp-admin`に移動するとダッシュボードが表示される
     
     
 # comical_blog
