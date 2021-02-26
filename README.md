@@ -12,6 +12,7 @@ WordPressのテーマを作成する際はこのリポジトリを使ってく�
     
 # 注意！
 <span style="color: red; ">**本来.env環境変数ファイルはGitHubにあげて公開してはいけません！！**</span>  
+<span style="color: red; ">**関連してAPIキーを公開してもいけません！！**</span>  
 今回アップしている.env環境変数ファイルはローカルのテスト用のものです。
     
 # comical_blog
