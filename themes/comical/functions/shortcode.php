@@ -70,7 +70,7 @@ add_shortcode('desc2CellDetail','shortcode_desc2CellDetail');
 
 /**
  * ショートコードに勝手に改行が入ってしまう問題の対処策一覧
- * 暫定的な解決方法は下記の3の対応方法
+ * 暫定的な解決方法は下記の1+3の対応方法
  */
 //1  https://bambooworks.co/shortcode-p-br/
 function shortcode_p_fix($content) {
