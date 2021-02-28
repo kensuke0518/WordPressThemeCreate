@@ -9,7 +9,7 @@
   
 ### 見出し
 ```
-[heading hnum="NUMBER" num="NUMBER" mt="NUMBER"]
+[heading hnum="NUMBER" num="NUMBER" mt="NUMBER"]見出し内容[/heading]
 ```
 - `hnum`  
 見出しの大きさを表します。  
