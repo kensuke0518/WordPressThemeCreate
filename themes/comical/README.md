@@ -3,16 +3,20 @@
 
 ## ショートコード
 ### コードをハイライトする
-`[highlight]ここにコードを入力する[/highlight]`  
+```
+[highlight]ここにコードを入力する[/highlight]
+````
   
 ### 見出し
-`[heading hnum="NUMBER" num="NUMBER" mt="NUMBER"]`
-- hnum
+```
+[heading hnum="NUMBER" num="NUMBER" mt="NUMBER"]
+```
+- `hnum`  
 見出しの大きさを表します。  
 `<h1>`にしたければ1を、`<h2>`にしたければ2を入れてください。  
-- num
+- `num`  
 見出しのスタイルを変更します。
-- mt
+- `mt`  
 見出しの上に余白（マージン)をつけます。マージンの大きさは1〜100pxまで
   
 ### 用語集
