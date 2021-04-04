@@ -1,12 +1,12 @@
 .c-scroll-text{
-    border: 1px solid color(siteC,base);
-    border-radius: 5px;
     height: 125px;
     overflow: hidden;
+    border: 1px solid color(siteC,base);
+    border-radius: 5px;
     &__inner{
         height: 100%;
-        overflow: auto;
         padding: 15px 25px;
+        overflow: auto;
     }
     &__row{
         margin-top: 10px;
@@ -19,17 +19,17 @@
     }
 }
 .c-search{
+    display: block;
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 10px;
     border: 1px solid var(--textcolor);
     border-radius: 5px;
     color: var(--textcolor);
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    width: 920px;
     &::placeholder{
         color: color(siteC,light);
-    }
-    
+    } 
 }
 [data-colormode="dark"] .c-search{
     background: #000;
@@ -37,8 +37,8 @@
     color: #fff;
 }
 .c-list-line{
-    list-style: "- ";
     margin-left:1em;
+    list-style: "- ";
     &__item{
         margin-top: 15px;
         &:first-child{
@@ -48,48 +48,114 @@
 }
 .c-desc2cell{
     @mixin bottomBorder{
-        border-bottom:1px solid color(siteC,base);
         border-right:1px solid color(siteC,base);
+        border-bottom:1px solid color(siteC,base);
     }
     @mixin topBorder{
-        border-left:1px solid color(siteC,base);
         border-top:1px solid color(siteC,base);
+        border-left:1px solid color(siteC,base);
     }
+    width: 100%;
     outline: 1px solid color(siteC,base);
     outline-offset: -1px;
-    .c-desc2cell__body{
+    @include mq(){
+        outline:0;
+    }
+    &__body{
         position: relative;
     }
     &__box{
         display: flex;
+        @include mq(){
+            flex-direction: column;
+            margin-top: 2rem;
+        }
+    }
+    &__boxout{
+        position: absolute;
+        top:0;
+        right: 0;
+        @include mq(){
+            display: block;
+            top:auto;
+            right: auto;
+            bottom:-4.5rem;
+            left:2%;
+            width: 96%;
+            padding: .5rem;
+            border: 1px solid #fff;
+            text-align: center;
+        }
     }
     .c-desc2cell__term{
         @include topBorder;
-        align-items: center;
         display: flex;
-        padding: 5px;
+        position: relative;
+        align-items: center;
         width: 25%;
+        padding: 5px;
+        font-weight: bold;
+        @include mq(){
+            width: 100%;
+            @include bottomBorder;
+        }
+        &::after{
+            content: '詳細';
+            display: inline;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: normal;
+            @include mq(){
+                content: '▼';
+            }
+        }
+        &.is-active{
+            background: rgb(0, 110, 255);
+            color: #fff;
+            &::after{
+                content: '閉じる';
+                @include mq(){
+                    content: '▲';
+                }
+            }
+        }
     }
     .c-desc2cell__define{
         @include topBorder;
-        padding: 5px;
         width: 75%;
+        padding: .5rem;
+        @include mq(){
+            width: 100%;
+            @include bottomBorder;
+        }
     }
     .c-desc2cell__detail{
-        background: var(--bgcolor);
-        border: 1px solid color(siteC,base);
         display: none;
-        height: 767px;
-        left: 25%;
-        overflow: auto;
-        padding: 10px;
         position: absolute;
         top:0;
+        left: 25%;
+        width: 75%;
+        height: 800px;
+        overflow: auto;
+        transition: height 1s ease;
+        border: 1px solid color(siteC,base);
+        background: var(--bgcolor);
+        @include mq(){
+            display: block;
+            position: static;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            border-top: 0;
+            border-bottom: 0;
+        }
         &.is-active{
             display:block;
         }
     }
-    &__boxout{
-        border: 1px solid color(siteC,base);
+    .c-desc2cell__detail-inner{
+        position: relative;
+        padding: 1rem;
     }
 }

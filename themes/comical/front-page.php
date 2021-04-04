@@ -18,17 +18,21 @@
             <!--<h1 class="c-heading-1">JavaScript</h1>-->
             <?php if(have_posts()): ?>
             <input type="text" class="c-search u-mt30" placeholder="下の項目をリアルタイムで絞り込めます。検索したい語句を入力してください。">
-            <div class="p-inclusion-rows">
+            <div class="l-frontRows">
             <?php while(have_posts()): the_post(); ?>
                 <div class="c-card-2 u-mb20">
                     <a href="<?php the_permalink(); ?>" class="c-card__link" id="post-<?php the_ID() ?>">
-                    <?php if(has_post_thumbnail()): ?>
-                        <?php the_post_thumbnail('c-card-2__thumbnail'); ?>
-                    <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" width="128" height="72" alt="" class="c-card__img">
-                    <?php endif; ?>
-                        <div class="c-card__body">
-                            <div class="c-card__title"><?php the_title(); ?></div>
+                        <div class="c-card__inner">
+                            <div class="c-card__img">
+                            <?php if(has_post_thumbnail()): ?>
+                                <?php the_post_thumbnail('c-card-2__thumbnail'); ?>
+                            <?php else: ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" alt="">
+                            <?php endif; ?>
+                            </div>
+                            <div class="c-card__body">
+                                <div class="c-card__title"><?php the_title(); ?></div>
+                            </div>
                         </div>
                     </a>
                 </div>

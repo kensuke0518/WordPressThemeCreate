@@ -31,17 +31,10 @@ function shortcode_desc2Cell($atts,$content = null){
     $content = do_shortcode( shortcode_unautop( $content ) );
     return '<div class="c-desc2cell">
                     <dl class="c-desc2cell__list">
-                        <div class="c-desc2cell__box">
-                            <dt class="c-desc2cell__term">用語</dt>
-                            <dd class="c-desc2cell__define">説明</dd>
-                        </div>
                         <div class="c-desc2cell__body">
                             '.$content.'
                         </div>
                     </dl>
-                    <div class="c-desc2cell__boxout">
-                        <p>説明を終わる</p>
-                    </div>
                 </div>';
 }
 add_shortcode('desc2Cell','shortcode_desc2Cell');
@@ -55,15 +48,15 @@ function shortcode_desc2CellBox($atts,$content = null){
     extract($func);
     return '<div class="c-desc2cell__box">
                 <dt class="c-desc2cell__term">'.$term.'</dt>
-                <dd class="c-desc2cell__define">'.$define.'</dd>
                 '.$content.'
+                <dd class="c-desc2cell__define">'.$define.'</dd>
             </div>';
 }
 add_shortcode('desc2CellBox','shortcode_desc2CellBox');
 
 function shortcode_desc2CellDetail($atts,$content = null){
     $content = do_shortcode( shortcode_unautop( $content ) );
-    return '<dd class="c-desc2cell__detail">'.$content.'</dd>';
+    return '<dd class="c-desc2cell__detail"><div class="c-desc2cell__detail-inner"><p class="c-desc2cell__boxout">×</p>'.$content.'</div></dd>';
 }
 add_shortcode('desc2CellDetail','shortcode_desc2CellDetail');
 

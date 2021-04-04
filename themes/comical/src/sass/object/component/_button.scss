@@ -1,21 +1,20 @@
 .c-hamburger{
     @mixin hamburger{
-        background: color(siteC);
-        border-radius: 5px;
         display: block;
+        width: 48px;
         height: 5px;
         transition: transform 250ms ease-in;
-        width: 48px;
+        border-radius: 5px;
+        background: color(siteC);
     }
     position: absolute;
-    right: 0px;
     top: 25px;
+    right: 0px;
     width: 48px;
-    z-index:100;
     &__link{
         display: inline-block;
-        height: 35px;
         width: 48px;
+        height: 35px;
     }
     &__btn{
         @include hamburger;
@@ -26,16 +25,16 @@
             position: absolute;
         }
         &::before{
-            left:0;
             top:15px;
+            left:0;
         }
         &::after{
-            left:0;
             top:30px;
+            left:0;
         }
     }
 }
-.gmenu-open{
+.c-gmenuOpen{
     &.is-open{
         &.c-hamburger{
             right: 0px;
@@ -53,36 +52,36 @@
 }
 
 .c-darkmode{
-    background: #707070;
-    border-radius: 30px;
-    height: 46px;
     width: 90px;
+    height: 46px;
+    border-radius: 30px;
+    background: #707070;
     &__btn{
-        cursor: pointer;
         position: relative;
+        cursor: pointer;
         &::before{
-            background:#fff;
-            border-radius: 21px;
-            box-sizing: border-box;
             content:"";
             display: block;
-            height: 42px;
-            left: 2px;
             position: absolute;
             top: 2px;
-            transition: all 250ms ease-in;
+            left: 2px;
+            box-sizing: border-box;
             width: 42px;
+            height: 42px;
+            transition: all 250ms ease-in;
+            border-radius: 21px;
+            background:#fff;
         }
         &::after{
             content:"";
-            width: 30px;
-            height: 30px;
-            border-radius: 100%;
-            box-shadow: 30px 30px 0 #faa80e;
-            left: -22px;
             position: absolute;
             top:-22px;
+            left: -22px;
+            width: 30px;
+            height: 30px;
             transition: all 250ms ease-in;
+            border-radius: 100%;
+            box-shadow: 30px 30px 0 #faa80e;
         }
     }
     input[type="checkbox"]{
@@ -90,16 +89,16 @@
         &:checked{
             + .c-darkmode__btn{
                 &::before{
-                    background-color: darkblue;
+                    transform:translate(44px);
                     border: 2px solid yellow;
-                    transform:translate(44px)
+                    background-color: darkblue
                 }
                 &::after{
-                    left: -1px;
                     position: absolute;
                     top: 4px;
-                    box-shadow: 10px 4px 0 0 yellow;
+                    left: -1px;
                     transform:translate(44px);
+                    box-shadow: 10px 4px 0 0 yellow;
                 }
             }
         }

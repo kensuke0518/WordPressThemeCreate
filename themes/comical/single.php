@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-    <main class="l-main-page">
+    <main class="l-mainPage">
         <?php
         if(have_posts()):
          ?>
         <section>
         <?php while(have_posts()): the_post(); ?>
-            <div class="l-lead-part">
+            <div class="l-leadPart">
                 <h1 class="c-heading-2"><?php the_title(); ?></h1>
                 <div class="u-pb30">
                     <div class="u-mt35"><time class="u-bold">更新日時：<?php the_time('Y/m/d'); ?></time></div>
