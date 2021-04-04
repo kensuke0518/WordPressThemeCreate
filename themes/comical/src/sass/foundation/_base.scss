@@ -19,14 +19,6 @@ body{
     sans-serif;
     font-size: 1.6rem;
     line-height: 1.4;
-    @include mq(){
-        font-size: 16px;
-    }
-}
-body.gmenu-is-open{
-    height: 100vh;
-    padding-right: 15px;
-    overflow-y: hidden;
 }
 a{
     transition: color 250ms ease, opacity 250ms ease;

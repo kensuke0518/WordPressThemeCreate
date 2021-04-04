@@ -1,21 +1,24 @@
-.c-scroll-text{
+.c-scrollText{
     height: 125px;
     overflow: hidden;
     border: 1px solid color(siteC,base);
     border-radius: 5px;
     &__inner{
         height: 100%;
-        padding: 15px 25px;
+        padding: 1.5rem 2.5rem;
         overflow: auto;
     }
     &__row{
-        margin-top: 10px;
+        margin-top: 1rem;
         &:first-child{
             margin-top: 0;
         }
     }
     &__time{
-        margin-right: 20px;
+        margin-right: 2rem;
+        @include mq(){
+            display: block;
+        }
     }
 }
 .c-search{
@@ -23,7 +26,7 @@
     width: 100%;
     max-width: 920px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 1rem;
     border: 1px solid var(--textcolor);
     border-radius: 5px;
     color: var(--textcolor);
@@ -36,7 +39,7 @@
     caret-color:#fff;
     color: #fff;
 }
-.c-list-line{
+.c-listLine{
     margin-left:1em;
     list-style: "- ";
     &__item{
@@ -83,7 +86,7 @@
             left:2%;
             width: 96%;
             padding: .5rem;
-            border: 1px solid #fff;
+            border: 1px solid var(--textcolor);
             text-align: center;
         }
     }
@@ -93,11 +96,12 @@
         position: relative;
         align-items: center;
         width: 25%;
-        padding: 5px;
+        padding: .5rem;
         font-weight: bold;
         @include mq(){
             width: 100%;
             @include bottomBorder;
+            border-bottom: 0;
         }
         &::after{
             content: '詳細';
@@ -154,7 +158,7 @@
             display:block;
         }
     }
-    .c-desc2cell__detail-inner{
+    .c-desc2cell__detailInner{
         position: relative;
         padding: 1rem;
     }

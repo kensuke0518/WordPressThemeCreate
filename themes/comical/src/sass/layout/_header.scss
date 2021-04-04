@@ -1,12 +1,19 @@
 #l-topHeader{
-    background: #b6f2fd;
+    @include mq(){
+        height: 5rem;
+    }
 }
-#l-pageHeader{
-    background: #b6f2fd;
+.l-gmenuButton{
+    position: absolute;
+    z-index:1000;
+    top: 2.5rem;
+    right: 1rem;
+    @include mq(){
+        top: .8rem;
+        transform: scale(.6);
+    }
 }
- .l-gmenu-button{
-     z-index:1000;
- }
+
 .l-gmenu{
     position: fixed;
     z-index: 999;
@@ -22,7 +29,6 @@
         padding:2rem;
     }
     &.is-open{
-        //padding-right:20px;
         top:0;
     }
 }
@@ -30,6 +36,7 @@
     display: flex;
     max-width: 1024px;
     margin: 0 auto;
+    overflow: hidden;
     @include mq(){
         display: block;
     }
@@ -55,6 +62,7 @@
         position: relative;
         width: 100%;
         height: auto;
+        margin-bottom: 2rem;
         padding: 0 0 2rem;
         border:0;
         border-bottom: 1px solid color(siteC,light);
@@ -66,39 +74,61 @@
     &__list{
         &-item{
             display: block;
-            margin:60px 0 0 0;
+            margin:6rem 0 0 0;
             @include mq(){
                 margin: 1rem 0 0;
             }
         }
     }
-    &__other-item{
+    &__otherItem{
         margin-top:auto;
         @include mq(){
             position: absolute;
-            top: -2rem;
+            top: -1.5rem;
             left: 0;
-            transform: scale(.8);
+            transform: scale(.7);
         }
     }
 }
 
-.l-mvOuter{
+.l-mv{
     position: relative;
     width: 100%;
-}
-.l-mv{
-    max-width: 1024px;
-    margin: 0 auto;
+    background: #b6f2fd;
+    &__inner{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
     &__img{
         display: block;
         margin: 0 auto;
     }
 }
+.l-mv__top,
+.l-mv__page{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.l-mv__top::before,
+.l-mv__page::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    background-color: #157f3a;
+    background-position: 0 50%;
+    background-size: cover;
+    filter: brightness(1.2) blur(30px);
+}
 
 .l-artset{
     flex:1;
-    padding-left: 25px;
+    padding-left: 2.5rem;
+    overflow: auto;
     @include mq(){
         padding: 0;
     }

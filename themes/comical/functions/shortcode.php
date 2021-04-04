@@ -19,7 +19,7 @@ function shortcode_heading($atts,$content = null){
     ),$atts);
     extract($func);
     $content = do_shortcode( shortcode_unautop( $content ) );
-    return '<h'.$hnum.' class="c-heading-'.$num.' u-mt'.$mt.'">'.$content.'</h'.$hnum.'>';
+    return '<h'.$hnum.' class="c-heading'.$num.' u-mt'.$mt.'">'.$content.'</h'.$hnum.'>';
 }
 add_shortcode('heading','shortcode_heading');
 
@@ -56,7 +56,7 @@ add_shortcode('desc2CellBox','shortcode_desc2CellBox');
 
 function shortcode_desc2CellDetail($atts,$content = null){
     $content = do_shortcode( shortcode_unautop( $content ) );
-    return '<dd class="c-desc2cell__detail"><div class="c-desc2cell__detail-inner"><p class="c-desc2cell__boxout">×</p>'.$content.'</div></dd>';
+    return '<dd class="c-desc2cell__detail"><div class="c-desc2cell__detailInner"><p class="c-desc2cell__boxout">×</p>'.$content.'</div></dd>';
 }
 add_shortcode('desc2CellDetail','shortcode_desc2CellDetail');
 

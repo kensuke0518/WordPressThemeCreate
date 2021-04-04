@@ -1,0 +1,8 @@
+body.gmenu-is-open{
+    height: 100vh;
+    padding-right: 1.5rem;
+    overflow-y: hidden;
+    @include mq(){
+        padding-right: 0;
+    }
+}

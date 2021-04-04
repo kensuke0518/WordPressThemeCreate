@@ -20,7 +20,7 @@ function termClick() {
             const box = this.closest('.c-desc2cell__box');
             const dds = body.querySelectorAll('.c-desc2cell__detail');
             const detail = box.querySelector('.c-desc2cell__detail');
-            const inner = box.querySelector('.c-desc2cell__detail-inner');
+            const inner = box.querySelector('.c-desc2cell__detailInner');
             const height = inner.offsetHeight;
             const fontSize = parseInt(getComputedStyle(inner).fontSize);
             //初期化:is-activeを削除

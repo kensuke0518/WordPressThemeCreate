@@ -6,7 +6,7 @@
         <section>
         <?php while(have_posts()): the_post(); ?>
             <div class="l-leadPart">
-                <h1 class="c-heading-2"><?php the_title(); ?></h1>
+                <h1 class="c-heading2"><?php the_title(); ?></h1>
                 <div class="u-pb30">
                     <div class="u-mt35"><time class="u-bold">更新日時：<?php the_time('Y/m/d'); ?></time></div>
                     <?php if(has_tag()==true): ?>
@@ -18,15 +18,15 @@
                 if($meta):
                 ?>
                 <div class="u-mt30">
-                    <h2 class="c-heading-1">今回のポイント</h2>
-                    <ul class="u-mt30 c-list-line">
+                    <h2 class="c-heading1">今回のポイント</h2>
+                    <ul class="u-mt30 c-listLine">
                     <?php
                     /**
                      * カスタムフィールドについて
                      * https://www.webdesignleaves.com/pr/wp/wp_custom_fields.html
                      */
                     function echoPoint($pointVal){
-                        echo '<li class="c-list-line__item">'.esc_html($pointVal).'</li>';
+                        echo '<li class="c-listLine__item">'.esc_html($pointVal).'</li>';
                     };
                     if(is_array($meta)){
                         foreach($meta as $value) {

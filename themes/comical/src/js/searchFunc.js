@@ -1,12 +1,12 @@
 'use strict';
 
 export const searchFunc = () => {
-    const outside = document.querySelector('.p-inclusion-rows');
+    const outside = document.querySelector('.l-frontRows');
     const searchInput = document.querySelector('.c-search');
     const nothingCheck = [];
     let searchElms;
     searchInput.addEventListener('focus', e => {
-        searchElms = document.querySelectorAll('.c-card-2');
+        searchElms = document.querySelectorAll('.c-cardSideway');
     });
     searchInput.addEventListener('input', e => {
         const inputWords = e.target.value;

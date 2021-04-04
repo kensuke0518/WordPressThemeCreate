@@ -9,16 +9,30 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/tomorrow-night-blue.min.css">
     <?php endif; ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <style>
+        .l-mv__top::before{
+            background-image:url(<?php echo get_template_directory_uri(); ?>/images/mv.png);
+        }
+        .l-mv__page::before{
+            background-image:url(<?php if(has_post_thumbnail()): ?>
+            <?php
+            $attr = array(
+                'class' => 'l-mv__img',
+            );
+            the_post_thumbnail(array( 1024, 576 ),$attr);
+            ?>
+        <?php else: ?>
+            <?php echo get_template_directory_uri(); ?>/images/mv.png
+        <?php endif; ?>);
+        }
+    </style>
     <?php
     wp_head();
     ?>
 </head>
 <body>
-<?php if(is_home()): ?>
     <header id="l-topHeader">
-<?php elseif(is_single()): ?>
-    <header id="l-pageHeader">
-<?php endif; ?>
+        <div class="c-hamburger l-gmenuButton"><a href="javascript:void(0)" class="c-hamburger__link"><span class="c-hamburger__btn"></span></a></div>
         <div class="l-gmenu">
             <div class="l-gmenu__inner">
                 <nav class="l-gnav">
@@ -43,12 +57,12 @@
             </div>
         </div>
     </header>
-    <div class="l-mvOuter">
-        <div class="c-hamburger c-gmenuOpen l-gmenu-button"><a href="javascript:void(0)" class="c-hamburger__link"><span class="c-hamburger__btn"></span></a></div>
 <?php if(is_home()): ?>
-        <div class="l-mv"><img src="<?php echo get_template_directory_uri(); ?>/images/mv.png" alt=""></div>
+    <div class="l-mv l-mv__top">
+        <div class="l-mv__inner"><img src="<?php echo get_template_directory_uri(); ?>/images/mv.png" alt=""></div>
 <?php elseif(is_single()): ?>
-        <div class="l-mv">
+    <div class="l-mv l-mv__page">
+        <div class="l-mv__inner">
         <?php if(has_post_thumbnail()): ?>
             <?php
             $attr = array(
