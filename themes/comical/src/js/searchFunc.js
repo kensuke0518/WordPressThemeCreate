@@ -6,7 +6,7 @@ export const searchFunc = () => {
     const nothingCheck = [];
     let searchElms;
     searchInput.addEventListener('focus', e => {
-        searchElms = document.querySelectorAll('.c-cardSideway');
+        searchElms = outside.querySelectorAll('.c-card');
     });
     searchInput.addEventListener('input', e => {
         const inputWords = e.target.value;

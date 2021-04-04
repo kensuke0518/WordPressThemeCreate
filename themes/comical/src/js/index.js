@@ -11,6 +11,6 @@ desc2cellFunc();
 darkFunc();
 cardClassFunc();
 cardBoxHeight();
-if (location.pathname === '/') searchFunc()
+if (location.search === '') searchFunc();
 
 
