@@ -33,6 +33,10 @@
 <body>
     <header id="l-topHeader">
         <div class="c-hamburger l-gmenuButton"><a href="javascript:void(0)" class="c-hamburger__link"><span class="c-hamburger__btn"></span></a></div>
+        <div class="c-darkmode l-gmenuDark">
+            <input type="checkbox" class="c-darkmode__checkbox" id="aaa" data-dark="dark">
+            <label for="aaa" class="c-darkmode__btn"><span class="c-darkmode__feature"></span></label>
+        </div>
         <div class="l-gmenu">
             <div class="l-gmenu__inner">
                 <nav class="l-gnav">
@@ -44,12 +48,6 @@
                         <li class="gnav__list-item"><a href="#">このサイトについて</a></li>
                         <li class="gnav__list-item"><a href="#">お問い合わせ</a></li>-->
                     </ul>
-                    <div class="l-gnav__otherItem">
-                        <div class="c-darkmode u-mt10">
-                            <input type="checkbox" class="c-darkmode__checkbox" id="aaa" data-dark="dark">
-                            <label for="aaa" class="c-darkmode__btn"><span class="c-darkmode__feature"></span></label>
-                        </div>
-                    </div>
                 </nav>
                 <section class="l-artset">
                 <?php get_template_part('loop','recently'); ?>

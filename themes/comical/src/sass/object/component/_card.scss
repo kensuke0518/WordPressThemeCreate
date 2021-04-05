@@ -48,6 +48,9 @@
     border:1px solid color(siteC,light);
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    @include mq(){
+        max-width: none;
+    }
     .c-card{
         &__link{
             &:hover{

@@ -1,11 +1,11 @@
 'use strict';
 
-export function desc2cellFunc() {
+export const desc2cellFunc = () => {
     termClick();
     boxoutClick();
 }
 
-const dts = document.getElementsByClassName('c-desc2cell__term');
+const dts = document.getElementsByClassName('js-click');
 const outs = document.getElementsByClassName('c-desc2cell__boxout');
 const mqWidthMd = 600;
 
@@ -74,7 +74,7 @@ function boxoutClick(){
             //要素の取得
             const body = this.closest('.c-desc2cell');
             const box = this.closest('.c-desc2cell__box');
-            const term = box.querySelector('.c-desc2cell__term');
+            const term = box.querySelector('.js-click');
             const detail = box.querySelector('.c-desc2cell__detail');
             const removeActive = () => {
                 term.classList.remove('is-active');
@@ -90,5 +90,17 @@ function boxoutClick(){
                 detail.style.height = '';
             }
         });
+    }
+}
+
+//.c-desc2cell__detailがない場合に.c-desc2cell__termに「詳細」を表示せずクリックできないようにする。
+export const hasDetailFunc = () => {
+    const cells = document.querySelectorAll('.c-desc2cell');
+    for (const cell of cells) {
+        const boxies = cell.querySelectorAll('.c-desc2cell__box');
+        for (const box of boxies) {
+            const term = box.querySelector('.c-desc2cell__term');
+            if (!box.querySelector('.c-desc2cell__detail')) term.classList.remove('js-click');
+        }
     }
 }

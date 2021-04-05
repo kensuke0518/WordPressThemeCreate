@@ -40,8 +40,8 @@
                 </div>
                 <?php endif; ?>
             </div>
-            <section class="u-mt45">
-                <div class="u-mt60">
+            <section>
+                <div>
                 <?php the_content(); ?><!-- ここに以下のテンプレートを追加できるようにしたい。あとショートコードを使いやすいようにもうちょっと拡張したい。 https://netaone.com/wp/shortcodes-ultimate/ -->
                 </div>
             </section>

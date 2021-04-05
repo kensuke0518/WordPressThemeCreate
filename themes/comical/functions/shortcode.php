@@ -47,7 +47,7 @@ function shortcode_desc2CellBox($atts,$content = null){
     ),$atts);
     extract($func);
     return '<div class="c-desc2cell__box">
-                <dt class="c-desc2cell__term">'.$term.'</dt>
+                <dt class="c-desc2cell__term js-click"><span class="c-desc2cell__termInner">'.$term.'</span></dt>
                 '.$content.'
                 <dd class="c-desc2cell__define">'.$define.'</dd>
             </div>';
