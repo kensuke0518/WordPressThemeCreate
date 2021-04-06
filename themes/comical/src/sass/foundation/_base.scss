@@ -20,7 +20,8 @@ body{
     sans-serif;
     font-size: 1.6rem;
     line-height: 1.4;
-}
+    word-wrap:break-word;
+    overflow-wrap : break-word;}
 a{
     transition: color 250ms ease, opacity 250ms ease;
     color: color(linkC,base);
