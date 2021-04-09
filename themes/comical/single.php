@@ -6,7 +6,7 @@
         <section>
         <?php while(have_posts()): the_post(); ?>
             <div class="l-leadPart">
-                <h1 class="c-heading2"><?php the_title(); ?></h1>
+                <h1 class="c-heading1"><?php the_title(); ?></h1>
                 <div class="u-pb30">
                     <div class="u-mt35"><time class="u-bold">更新日時：<?php the_time('Y/m/d'); ?></time></div>
                     <?php if(has_tag()==true): ?>

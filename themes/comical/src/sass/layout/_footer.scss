@@ -1,0 +1,18 @@
+.l-footer{
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+    &__inner{
+        padding: 4rem 0;
+        border-top: 1px solid var(--textcolor);
+    }
+}
+.l-footerLink{
+    margin-bottom: 4rem;
+    &_list{
+        display: flex;
+        justify-content: center;
+    }
+}
+.l-copyright{
+    text-align: center;
+}

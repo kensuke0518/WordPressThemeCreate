@@ -1,6 +1,6 @@
 #l-topHeader{
     @include mq(){
-        height: 5rem;
+        padding: .5rem 0;
     }
 }
 .l-gmenuButton{
@@ -30,7 +30,6 @@
         transform: scale(.5);
     }
 }
-
 .l-gmenu{
     position: fixed;
     z-index: 999;
@@ -59,20 +58,30 @@
     }
 }
 .l-logo{
-    display: inline-block;
+    display: block;
     margin-bottom: 1rem;
     @include mq(){
         display: block;
-        width: 10rem;
+        width: 15rem;
         margin: 0 auto 1rem;
     }
+}
+.l-logoSp{
+    @include mq(){
+        display: block;
+        width: 88px;
+        margin: 0 auto;
+    }
+}
+.l-logoSvg{
+    vertical-align: bottom;
 }
 .l-gnav{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 210px;
     height:calc(100vh - 40px);
-    padding: 0 0 10rem 0;
+    padding: 0 1rem 10rem 0;
     border-right: 1px solid color(siteC,light);
     @include mq(){
         display: block;

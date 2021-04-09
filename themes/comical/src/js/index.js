@@ -5,7 +5,7 @@ import { desc2cellFunc, hasDetailFunc } from "./desc2cellFunc";
 import { darkFunc } from "./darkFunc";
 import { searchFunc } from "./searchFunc";
 import { cardClassFunc, cardBoxHeight } from "./cardClassFunc";
-import { adBlockFunc } from "./adBlockFunc";
+//import { adBlockFunc } from "./adBlockFunc";
 
 gmenuFunc();
 hasDetailFunc();
@@ -14,7 +14,7 @@ darkFunc();
 cardClassFunc();
 cardBoxHeight();
 if (location.href === '') searchFunc();
-adBlockFunc();
+//adBlockFunc();
 
 
 

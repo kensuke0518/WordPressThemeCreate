@@ -13,13 +13,13 @@ add_shortcode('highlight','shortcode_codeHighlight');
  */
 function shortcode_heading($atts,$content = null){
     $func = shortcode_atts(array(
-        'hnum' => 1,
+        //'hnum' => 1, //見出し要素の番号h1やh2などを決める
         'num' => 1,
         'mt' => 30,
     ),$atts);
     extract($func);
     $content = do_shortcode( shortcode_unautop( $content ) );
-    return '<h'.$hnum.' class="c-heading'.$num.' u-mt'.$mt.'">'.$content.'</h'.$hnum.'>';
+    return '<h2 class="c-heading'.$num.' u-mt'.$mt.'">'.$content.'</h2>';
 }
 add_shortcode('heading','shortcode_heading');
 
