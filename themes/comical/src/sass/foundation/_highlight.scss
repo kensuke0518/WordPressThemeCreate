@@ -1,9 +1,0 @@
-pre{
-    .hljs{
-        padding:2rem;
-        font-family: SFMono-Regular,Menlo,Consolas,"Bitstream Vera Sans Mono","Courier New",Courier,"BIZ UDGothic",メイリオ,Meiryo,monospace !important;
-        @include mq(){
-            padding: 1rem;
-        }
-    }
-}

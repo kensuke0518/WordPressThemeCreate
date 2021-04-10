@@ -3,12 +3,12 @@
 export const searchFunc = () => {
     const outside = document.querySelector('.l-frontRows');
     const searchInput = document.querySelector('.c-search');
-    const nothingCheck = [];
     let searchElms;
     searchInput.addEventListener('focus', e => {
         searchElms = outside.querySelectorAll('.c-card');
     });
     searchInput.addEventListener('input', e => {
+        const nothingCheck = [];
         const inputWords = e.target.value;
         searchElms.forEach(elm => {
             const elmText = elm.querySelector('.c-card__title');

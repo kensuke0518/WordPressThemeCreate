@@ -1,4 +1,4 @@
-<svg class="logoSvg" display="none" xmlns="http://www.w3.org/2000/svg"><!-- width="666px" height="262px" -->
+<svg class="logoSvg" display="none" xmlns="http://www.w3.org/2000/svg" width="666px" height="262px">
 <defs>
 <symbol viewBox="0 0 666 262" id="logoMain">
 <style type="text/css">

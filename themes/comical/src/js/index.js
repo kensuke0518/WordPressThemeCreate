@@ -13,7 +13,8 @@ desc2cellFunc();
 darkFunc();
 cardClassFunc();
 cardBoxHeight();
-if (location.href === '') searchFunc();
+console.log(location.hostname);
+if (location.pathname === '/') searchFunc();
 //adBlockFunc();
 
 

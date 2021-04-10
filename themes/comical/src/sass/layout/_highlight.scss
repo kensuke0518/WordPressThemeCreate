@@ -1,0 +1,39 @@
+.hljs{
+    padding:2rem;
+    font-family: SFMono-Regular,Menlo,Consolas,"Bitstream Vera Sans Mono","Courier New",Courier,"BIZ UDGothic",メイリオ,Meiryo,monospace !important;
+    overflow-wrap: normal;
+    @include mq(){
+        padding: 1rem;
+    }
+}
+.l-highlight{
+    position: relative;
+    &__text{
+        position: absolute;
+        top:0;
+        left: 0;
+        display: inline-block;
+        padding: .5rem;
+        background: #157f3a;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    &__html{
+        background: #ff4c1e;
+    }
+    &__css{
+        background: #0071bf;
+    }
+    &__javascript{
+        background: #c89b09;
+    }
+    &__php{
+        background: #777bb3;
+    }
+    &__code{
+        padding: 4.2rem 2rem 2rem;
+        @include mq(){
+            padding: 4.2rem 1rem 1rem;
+        }
+    }
+}

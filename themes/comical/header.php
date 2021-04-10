@@ -37,20 +37,24 @@
             <input type="checkbox" class="c-darkmode__checkbox" id="aaa" data-dark="dark">
             <label for="aaa" class="c-darkmode__btn"><span class="c-darkmode__feature"></span></label>
         </div>
-        <a href="/" class="l-logo l-logoSp disp-sp">
-            <svg class="l-logoSvg" height="auto" viewBox="0 0 666 262">
-                <use xlink:href="#logoMain"></use>
-            </svg>
-        </a>
+        <div class="l-headerLogo">
+            <a href="/" class="l-logo disp-sp">
+                <svg class="l-logoSvg" viewBox="0 0 666 262">
+                    <use xlink:href="#logoMain"></use>
+                </svg>
+            </a>
+        </div>
         <div class="c-hamburger l-gmenuButton"><a href="javascript:void(0)" class="c-hamburger__link"><span class="c-hamburger__btn"></span></a></div>
         <div class="l-gmenu">
             <div class="l-gmenu__inner">
                 <nav class="l-gnav">
-                    <a href="/" class="l-logo">
-                        <svg class="l-logoSvg" width="100%" height="auto" viewBox="0 0 666 262">
-                            <use xlink:href="#logoMain"></use>
-                        </svg>
-                    </a>
+                    <div class="l-gmenuLogo">
+                        <a href="/" class="l-logo">
+                            <svg class="l-logoSvg" width="100%" viewBox="0 0 666 262">
+                                <use xlink:href="#logoMain"></use>
+                            </svg>
+                        </a>
+                    </div>
                     <ul class="l-gnav__list">
                         <li class="l-gnav__listItem"><a href="<?php echo home_url(); ?>">ホームへ戻る</a></li>
                         <!--<li class="gnav__list-item"><a href="#">記事一覧</a></li>

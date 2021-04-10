@@ -42,7 +42,7 @@
     transition: right 400ms ease,background 400ms ease;
     background:var(--bgcolor);
     @include mq(){
-        padding:2rem;
+        padding:.5rem 2rem 2rem;
     }
     &.is-open{
         right:0;
@@ -57,24 +57,25 @@
         display: block;
     }
 }
-.l-logo{
-    display: block;
-    margin-bottom: 1rem;
-    @include mq(){
-        display: block;
-        width: 15rem;
-        margin: 0 auto 1rem;
-    }
-}
-.l-logoSp{
+.l-headerLogo{
+    display: none;
     @include mq(){
         display: block;
         width: 88px;
         margin: 0 auto;
     }
 }
+.l-gmenuLogo{
+    width: 150px;
+    margin: 0 auto;
+    @include mq(){
+        width: 88px;
+    }
+}
 .l-logoSvg{
     vertical-align: bottom;
+    width: 100%;
+    height: auto;
 }
 .l-gnav{
     display: flex;
@@ -98,6 +99,7 @@
         align-items: flex-end;
     }
     &__list{
+        margin-top: 2rem;
         &-item{
             display: block;
             margin:6rem 0 0 0;

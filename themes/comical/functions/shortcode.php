@@ -3,7 +3,34 @@
  * コードをハイライトする
  */
 function shortcode_codeHighlight($atts,$content=null){
-    return '<pre class="u-mt30 u-mb30"><code>'.$content.'</code></pre>';
+    $func = shortcode_atts(array(
+        'code' => 'plaintext',
+        'codename' => '',
+    ),$atts);
+    extract($func);
+    /*function bbb($ccc){
+        if($codeName === ""){$codeName = $ccc;}
+    }*/
+    switch ($code){
+        case 'html':
+            if($codename === '')$codename = 'HTML';
+            break;
+        case 'css':
+            if($codename === '')$codename = 'CSS';
+            break;
+        case 'javascript':
+            if($codename === '')$codename = 'JavaScript';
+            break;
+        case 'php':
+            if($codename === '')$codename = 'PHP';
+            break;
+    }
+    if($codename === ''){
+        return '<div class="l-highlight u-mt30 u-mb30"><pre><code class="'.$code.'">'.$content.'</code></pre></div>';
+    }
+    else{
+        return '<div class="l-highlight u-mt30 u-mb30"><p class="l-highlight__text l-highlight__'.$code.'">'.$codename.'</p><pre><code class="l-highlight__code '.$code.'">'.$content.'</code></pre></div>';
+    }
 }
 add_shortcode('highlight','shortcode_codeHighlight');
 

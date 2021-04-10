@@ -13,7 +13,7 @@
         </div>
     </footer>
     <?php if(is_single()): ?>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <?php endif; ?>
     <?php

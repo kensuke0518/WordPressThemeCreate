@@ -2,7 +2,7 @@
             <h1 class="c-heading1">最新記事一覧</h1>
             <!--<h1 class="c-heading1">JavaScript</h1>-->
             <?php if(have_posts()): ?>
-            <input type="text" class="c-search u-mt30" placeholder="下の項目をリアルタイムで絞り込めます。検索したい語句を入力してください。">
+            <input type="text" class="c-search u-mt30" placeholder="下の項目を絞り込めます。検索語句を入力してください。">
             <div class="l-frontRows">
             <?php while(have_posts()): the_post(); ?>
                 <div class="c-card c-card--sideway u-mb15">
