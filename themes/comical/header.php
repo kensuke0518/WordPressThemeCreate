@@ -7,24 +7,26 @@
     <title><?php if(!is_home()){wp_title(' | ',true,'right');} ?><?php bloginfo('name'); ?></title>
     <?php if(is_single()): ?>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/tomorrow-night-blue.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <?php endif; ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <?php
+    //トップ画像、サムネイル画像の設定
+    if(is_home()){
+        $url = get_template_directory_uri().'/images/mv.png';
+    }
+    elseif(is_single()){
+        if(has_post_thumbnail()){
+            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+        }
+        else{
+            $url = get_template_directory_uri().'/images/thumb_general_01.png';
+        }
+    }
+    ?>
     <style>
-        .l-mv__top::before{
-            background-image:url(<?php echo get_template_directory_uri(); ?>/images/mv.png);
-        }
-        .l-mv__page::before{
-            background-image:url(<?php if(has_post_thumbnail()): ?>
-            <?php
-            $attr = array(
-                'class' => 'l-mv__img',
-            );
-            the_post_thumbnail(array( 1024, 576 ),$attr);
-            ?>
-        <?php else: ?>
-            <?php echo get_template_directory_uri(); ?>/images/mv.png
-        <?php endif; ?>);
-        }
+        .l-mv__page::before{background-image:url(<?php echo $url ?>)}
     </style>
     <?php
     wp_head();
@@ -69,22 +71,8 @@
             </div>
         </div>
     </header>
-<?php if(is_home()): ?>
-    <div class="l-mv l-mv__top">
-        <div class="l-mv__inner"><img src="<?php echo get_template_directory_uri(); ?>/images/mv.png" alt=""></div>
-<?php elseif(is_single()): ?>
     <div class="l-mv l-mv__page">
         <div class="l-mv__inner">
-        <?php if(has_post_thumbnail()): ?>
-            <?php
-            $attr = array(
-                'class' => 'l-mv__img',
-            );
-            the_post_thumbnail(array( 1024, 576 ),$attr);
-            ?>
-        <?php else: ?>
-            <img class="l-mv__img" src="<?php echo get_template_directory_uri(); ?>/images/mv.png" alt="">
-        <?php endif; ?>
+            <img class="l-mv__img" src="<?php echo $url ?>" alt="">
         </div>
-<?php endif; ?>
     </div>

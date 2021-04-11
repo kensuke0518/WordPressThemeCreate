@@ -19,7 +19,7 @@
                         <?php if(has_post_thumbnail()): ?>
                             <?php the_post_thumbnail('c-card__thumbnail'); ?>
                         <?php else: ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/img_dummy_01.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/thumb_general_01.png" alt="">
                         <?php endif; ?>
                     </div>
                     <div class="c-card__body">

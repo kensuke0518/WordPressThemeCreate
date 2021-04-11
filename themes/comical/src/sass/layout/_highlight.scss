@@ -8,6 +8,7 @@
 }
 .l-highlight{
     position: relative;
+    white-space: pre;
     &__text{
         position: absolute;
         top:0;
@@ -23,6 +24,9 @@
     }
     &__css{
         background: #0071bf;
+    }
+    &__scss{
+        background: #c76395;
     }
     &__javascript{
         background: #c89b09;

@@ -1,6 +1,8 @@
 <?php
 /**
  * コードをハイライトする
+ * https://webutubutu.com/webdesign/5635
+ * ↑特定のpタグを削除する
  */
 function shortcode_codeHighlight($atts,$content=null){
     $func = shortcode_atts(array(
@@ -8,15 +10,15 @@ function shortcode_codeHighlight($atts,$content=null){
         'codename' => '',
     ),$atts);
     extract($func);
-    /*function bbb($ccc){
-        if($codeName === ""){$codeName = $ccc;}
-    }*/
     switch ($code){
         case 'html':
             if($codename === '')$codename = 'HTML';
             break;
         case 'css':
             if($codename === '')$codename = 'CSS';
+            break;
+        case 'scss':
+            if($codename === '')$codename = 'SCSS';
             break;
         case 'javascript':
             if($codename === '')$codename = 'JavaScript';
@@ -25,6 +27,10 @@ function shortcode_codeHighlight($atts,$content=null){
             if($codename === '')$codename = 'PHP';
             break;
     }
+    //ハイライトの中だけpタグが勝手に入らないように調整
+    //https://webutubutu.com/webdesign/5635
+    $content = str_replace( '<p>' , '' , $content );
+    $content = str_replace( '</p>' , '<br>' , $content );
     if($codename === ''){
         return '<div class="l-highlight u-mt30 u-mb30"><pre><code class="'.$code.'">'.$content.'</code></pre></div>';
     }
@@ -88,6 +94,7 @@ function shortcode_desc2CellDetail($atts,$content = null){
 add_shortcode('desc2CellDetail','shortcode_desc2CellDetail');
 
 
+
 /**
  * ショートコードに勝手に改行が入ってしまう問題の対処策一覧
  * 暫定的な解決方法は下記の1+3の対応方法
@@ -96,8 +103,10 @@ add_shortcode('desc2CellDetail','shortcode_desc2CellDetail');
 function shortcode_p_fix($content) {
 $content = str_replace( PHP_EOL, '', $content ); //これが足りなかったので3から拝借して対応
 $array = array (
-	']<br />' => ']',
-	'<br />[' => '[',
+    '<p>[' => '[',
+    ']</p>' => ']',
+    ']<br />' => ']',
+    '<br />[' => '[',
 );
 $content = strtr($content, $array);
 return $content;
